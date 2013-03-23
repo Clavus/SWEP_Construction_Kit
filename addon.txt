@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+	"name"		"SWEP Construction Kit"
+	"version"	"1.7"
+	"up_date"	""
+	"author_name"	"Clavus"
+	"author_email"	"@Clavus"
+	"author_url"	"www.clavusaurus.net"
+	"info"		"Construct your SWEP"
+	"override"	"0"
+}
