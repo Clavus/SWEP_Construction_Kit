@@ -52,7 +52,7 @@ SWEP.HoldType = "pistol"
 SWEP.HoldTypes = { "normal", "melee", "melee2", "fist", 
 "knife", "smg", "ar2", "pistol", "revolver", "rpg", "physgun", 
 "grenade", "shotgun", "crossbow", "slam", "duel", "passive",
-"camera" }
+"camera", "magic" }
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
