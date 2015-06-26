@@ -5,6 +5,7 @@ local function GetWeaponPrintText( wep )
 	str = str.."SWEP.HoldType = \""..wep.HoldType.."\"\n"
 	str = str.."SWEP.ViewModelFOV = "..wep.ViewModelFOV.."\n"
 	str = str.."SWEP.ViewModelFlip = "..tostring(wep.ViewModelFlip).."\n"
+	str = str.."SWEP.UseHands = "..tostring(wep.UseHands).."\n"
 	str = str.."SWEP.ViewModel = \""..wep.ViewModel.."\"\n"
 	str = str.."SWEP.WorldModel = \""..wep.CurWorldModel.."\"\n"
 	str = str.."SWEP.ShowViewModel = "..tostring(wep.ShowViewModel).."\n"
@@ -225,6 +226,18 @@ local fcbox = vgui.Create( "DCheckBoxLabel", pweapon )
 		wep.ViewModelFlip = fcbox:GetChecked()
 	end
 	if (wep.save_data.ViewModelFlip) then fcbox:SetValue(1)
+	else fcbox:SetValue(0) end
+fcbox:DockMargin(0,0,0,5)
+fcbox:Dock(TOP)
+
+// Use Hands
+local fcbox = vgui.Create( "DCheckBoxLabel", pweapon )
+	fcbox:SetTall( 20 )
+	fcbox:SetText( "Use Hands" )
+	fcbox.OnChange = function()
+		wep.UseHands = fcbox:GetChecked()
+	end
+	if (wep.save_data.UseHands) then fcbox:SetValue(1)
 	else fcbox:SetValue(0) end
 fcbox:DockMargin(0,0,0,5)
 fcbox:Dock(TOP)
