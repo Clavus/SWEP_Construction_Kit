@@ -121,6 +121,7 @@ local psettings = SimplePanel(ptool)
 				save_data.IronSightsPos, save_data.IronSightsAng = wep:GetIronSightCoordination()
 				save_data.ShowViewModel = wep.ShowViewModel
 				save_data.ShowWorldModel = wep.ShowWorldModel
+				save_data.UseHands = wep.UseHands
 				
 				local filename = "swep_construction_kit/"..text..".txt"
 				
