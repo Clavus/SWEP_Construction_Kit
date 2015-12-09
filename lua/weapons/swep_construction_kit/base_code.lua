@@ -71,6 +71,22 @@ function SWEP:OnRemove()
 	self:Holster()
 end
 
+function SWEP:PreDrawViewModel(vm)
+	if self.ShowViewModel == false then
+		render.SetBlend(0)
+	end
+end
+
+function SWEP:PostDrawViewModel(vm)
+	if self.ShowViewModel == false then
+		render.SetBlend(1)
+	end
+end
+//These two functions appear to be necessary now in order for the swep to properly hide viewmodels.
+//While you're here, a quick request: I'm having a bit of trouble figuring out how to edit WElements in the code.
+//It works fine for the owner of the swep in both 1st and 3rd person modes, but displays unchanged for all other players.
+//If you could include an example weapon on how to do this inside the addon (Assuming you still have any that would work) that would be excellent.
+
 if CLIENT then
 
 	SWEP.vRenderOrder = nil
