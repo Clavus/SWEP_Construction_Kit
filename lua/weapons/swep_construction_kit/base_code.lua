@@ -71,6 +71,18 @@ function SWEP:OnRemove()
 	self:Holster()
 end
 
+function SWEP:PreDrawViewModel(vm)
+	if self.ShowViewModel == false then
+		render.SetBlend(0)
+	end
+end
+
+function SWEP:PostDrawViewModel(vm)
+	if self.ShowViewModel == false then
+		render.SetBlend(1)
+	end
+end
+
 if CLIENT then
 
 	SWEP.vRenderOrder = nil
