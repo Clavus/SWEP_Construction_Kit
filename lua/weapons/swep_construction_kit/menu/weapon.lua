@@ -198,7 +198,7 @@ local vhbox = vgui.Create( "DCheckBoxLabel", pweapon )
 			LocalPlayer():GetViewModel():SetColor(Color(255,0,0,255))
 			// This should prevent the model from drawing, without stopping ViewModelDrawn from being called
 			// I tried Entity:SetRenderMode(1) with color alpha on 1 but the view model resets to render mode 0 every frame :/
-			LocalPlayer():GetViewModel():SetMaterial("Debug/hsv") 
+			LocalPlayer():GetViewModel():SetMaterial("vgui/hsv") 
 		end
 	end
 	if (wep.save_data.ShowViewModel) then vhbox:SetValue(1)
