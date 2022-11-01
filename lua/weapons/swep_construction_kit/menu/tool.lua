@@ -195,7 +195,7 @@ local basecbtn = vgui.Create( "DButton", ptool )
 	basecbtn:SetTall( 30 )
 	basecbtn:SetText( "Copy SWEP base code to clipboard" )
 	basecbtn.DoClick = function()
-		SetClipboardText(wep.basecode)
+		SetClipboardText(swep.basecode)
 		LocalPlayer():ChatPrint("Base code copied to clipboard!")
 	end
 basecbtn:DockMargin(0,5,0,0)
